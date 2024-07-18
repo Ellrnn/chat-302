@@ -51,7 +51,7 @@ def update_members_list():
 
 # Configurações do servidor
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('localhost', 9090))
+server.bind(('', 9090))
 server.listen(5)
 
 print("Servidor iniciado e aguardando conexões...")
