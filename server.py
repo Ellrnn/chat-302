@@ -53,8 +53,9 @@ def update_members_list():
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(('', 9090))
 server.listen(5)
-
+server_ip = socket.gethostbyname(server)
 print("Servidor iniciado e aguardando conexões...")
+print(server_ip)
 
 while True:
     client_socket, client_address = server.accept()
